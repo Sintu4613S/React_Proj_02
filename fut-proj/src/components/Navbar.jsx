@@ -20,8 +20,10 @@ const Navbar = ({ theme, setTheme }) => {
 
         </div>
 
-        <div className='text-sm max-sm:hidden  bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all'>
-          <Menu to={'/contact-us'} title={'Connect'} />
+        <div className='text-sm max-sm:hidden  bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-105 transition-all' >
+          <NavLink className='flex items-center gap-2' to={'/contact-us'} >Connect
+            <img src={assets.arrow_icon} width={14} alt=" arrow-img" />
+          </NavLink>
         </div>
 
       </div>
@@ -31,7 +33,9 @@ const Navbar = ({ theme, setTheme }) => {
 
 const Menu = ({ to, title, children }) => {
   return (
-    <NavLink to={to}>{title}{children}</NavLink>
+    <NavLink className={({ isActive }) =>
+      `transition-all duration-300 ease-in-out transform hover:bg-amber-300 rounded-xl ${isActive ? 'text-[tomato] scale-110' : ''}`
+    } to={to}>{title}{children}</NavLink>
 
   )
 }
