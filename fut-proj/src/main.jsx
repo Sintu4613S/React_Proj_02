@@ -4,7 +4,8 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home.jsx'
 import Services from './components/Services.jsx'
-import Testimonial from './components/Testimonial.jsx'
+import Contact from './components/Contact.jsx'
+import WorkPage from './components/WorkPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,9 +21,14 @@ const router = createBrowserRouter([
         element: <Services /> // Fixed typo here
       },
       {
-        path: '/testimonial',
-        element: <Testimonial /> // Fixed typo here
-      }
+        path: '/our-work',
+        element: <WorkPage /> // Fixed typo here
+      },
+      {
+        path: '/contact-us',
+        element: <Contact /> // Fixed typo here
+      },
+
     ]
   }
 ])
