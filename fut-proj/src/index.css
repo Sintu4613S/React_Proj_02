@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *)) * {
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+* {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  fontr: weight 500;
+  font-weight: 500;
 }
 
 @theme {
