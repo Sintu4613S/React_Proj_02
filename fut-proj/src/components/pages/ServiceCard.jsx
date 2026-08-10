@@ -3,7 +3,7 @@ import assets from '../../assets/assets'
 
 
 const ServiceCard = ({ service, index }) => {
-  console.log('Service m kya aaya props se', service, index)
+  // console.log('Service m kya aaya props se', service, index)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   return (
     <div className='relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-100'>
