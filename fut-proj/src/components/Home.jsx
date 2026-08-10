@@ -3,6 +3,7 @@ import Hero from './pages/Hero'
 
 import Trusetd from './pages/Trusetd'
 import Service from './pages/Service'
+import OurWork from './pages/OurWork'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Trusetd />
       <Service />
+      <OurWork />
     </>
   )
 }
