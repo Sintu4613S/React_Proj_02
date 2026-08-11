@@ -11,7 +11,7 @@ const Footer = () => {
           <p className='max-w-md'>From strategy to execution, we craft digital solutions that move your business forward.</p>
         </div>
         <div>
-          <h3>Subscribe to our newsteller</h3>
+          <h3 className='font-bold text-xl py-2'>Subscribe to our newsteller</h3>
           <p>The latest news,articles,resource sent your inbox weekly</p>
         </div>
       </div>
