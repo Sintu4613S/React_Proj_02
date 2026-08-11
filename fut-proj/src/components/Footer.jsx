@@ -7,7 +7,7 @@ const Footer = () => {
       {/* footer top */}
       <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
         <div>
-          <img src={assets.logo} className='w-32 sm:w-44' alt="" />
+          <img src={assets.logo} className='w-32 sm:w-44 mb-4' alt="" />
           <p className='max-w-md'>From strategy to execution, we craft digital solutions that move your business forward.</p>
         </div>
         <div>
@@ -15,7 +15,8 @@ const Footer = () => {
           <p>The latest news,articles,resource sent your inbox weekly</p>
         </div>
       </div>
-      <hr className='m-5 border border-gray-100 h-1' style={{ color: '#000000', backgroundColor: '#000000', height: '2px', borderColor: '#000000' }} />
+
+      <hr className='my-5 border border-gray-500 ' />
 
       <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
         <div>
