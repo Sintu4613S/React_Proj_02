@@ -7,6 +7,7 @@ import OurWork from './pages/OurWork'
 import Team from './pages/Team'
 import ContactForm from './pages/contactForm'
 import { Toaster } from 'react-hot-toast'
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <OurWork />
       <Team />
       <ContactForm />
+      <Footer />
     </>
   )
 }
