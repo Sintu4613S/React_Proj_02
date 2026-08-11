@@ -3,9 +3,10 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home.jsx'
-import Services from './components/Services.jsx'
-import Contact from './components/Contact.jsx'
-import WorkPage from './components/WorkPage.jsx'
+import Service from './components/pages/Service.jsx'
+import OurWork from './components/pages/OurWork.jsx'
+import ContactForm from './components/pages/contactForm.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -17,16 +18,16 @@ const router = createBrowserRouter([
         element: <Home /> // Fixed typo here
       },
       {
-        path: '/services',
-        element: <Services /> // Fixed typo here
+        path: '/service',
+        element: <Service /> // Fixed typo here
       },
       {
         path: '/our-work',
-        element: <WorkPage /> // Fixed typo here
+        element: <OurWork /> // Fixed typo here
       },
       {
         path: '/contact-us',
-        element: <Contact /> // Fixed typo here
+        element: <ContactForm /> // Fixed typo here
       },
 
     ]
