@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home.jsx'
 import Service from './components/pages/Service.jsx'
 import OurWork from './components/pages/OurWork.jsx'
-import ContactForm from './components/pages/contactForm.jsx'
+import ContactForm from './components/pages/ContactForm.jsx'
+
 
 
 const router = createBrowserRouter([
