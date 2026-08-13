@@ -1,0 +1,20 @@
+.main-container {
+  max-width: 900px;
+  margin: auto;
+
+}
+
+.main-container .greet {
+  font-size: 50px;
+  margin: 50px 0;
+  padding: 20px;
+  color: #c4c7c5;
+  font-weight: 600;
+}
+
+.greet p span {
+  background: linear-gradient(93deg, #4b90ff, #ff5546);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
