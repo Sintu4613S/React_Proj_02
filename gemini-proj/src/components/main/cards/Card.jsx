@@ -19,7 +19,7 @@ export default Card
 const Singlecard = ({ title, imageSrc }) => {
   return (
     <div className='card relative'>
-      <p>{title}</p>
+      <p className='text-xl'>{title}</p>
       <img src={imageSrc} className='w-8 absolute bottom-3 right-3 rounded-full bg-white' alt="" />
     </div>
   )

@@ -6,3 +6,7 @@
   position: relative;
   cursor: pointer
 }
+
+.card:hover {
+  background-color: #dfe4ea;
+}
