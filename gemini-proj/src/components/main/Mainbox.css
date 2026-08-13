@@ -16,5 +16,31 @@
   background: linear-gradient(93deg, #4b90ff, #ff5546);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
 
+.bottom-container {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  margin: auto;
+  margin-top: 8px;
+
+}
+
+.bottom-container .search-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 18px;
+  background-color: #e7ede9;
+  margin-bottom: 8px;
+}
+
+.search-box input {
+  outline: none;
+  padiing-left: 5px
 }
