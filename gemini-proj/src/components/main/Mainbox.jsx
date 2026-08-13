@@ -15,12 +15,13 @@ const Mainbox = () => {
       <div className='bottom-container'>
         <div className='search-box'>
           <input type="text" placeholder='Enter prompt here' />
-          <div className='flex gap-1'>
+          <div className='flex gap-1 cursor-pointer'>
             <img src={assets.gallery_icon} className='w-5' alt="" />
-            <img src={assets.gallery_icon2} className='w-5' alt="" />
+            <img src={assets.mic_icon} className='w-5' alt="" />
+            <img src={assets.send_icon} className='w-5' alt="" />
           </div>
         </div>
-        <p className='text-center text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident facere accusantium ipsam nisi ullam odio nihil fugiat quas. Reiciendis, vero!</p>
+        <p className='text-center text-sm' style={{ marginBottom: '10px' }}>Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps</p>
 
 
       </div>

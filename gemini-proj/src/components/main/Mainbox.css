@@ -42,5 +42,8 @@
 
 .search-box input {
   outline: none;
-  padiing-left: 5px
+  flex: 1;
+  padiing: 5px;
+  background: transparent;
+  font-size: 18px;
 }
