@@ -3,7 +3,7 @@ import { assets } from '../../assests/assest'
 
 const Navbar = () => {
   return (
-    <div className='w-full h-15 flex justify-between items-center' style={{ padding: '20px' }}>
+    <div className='flex justify-between items-center' style={{ padding: '20px' }}>
       <div>
         <p className='font-semibold text-2xl'>Gemini</p></div>
 
