@@ -1,0 +1,21 @@
+.response-loading {
+  width: 100%;
+  padding: 10px 15px;
+  animaition: fadeIn 5s forwards;
+  font-size: 30px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.output-box {
+  font-size: 40px;
+
+}
