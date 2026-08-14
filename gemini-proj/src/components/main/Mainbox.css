@@ -22,11 +22,10 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 0 20px;
-  margin: auto;
-  margin-top: 8px;
-
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .bottom-container .search-box {
@@ -43,7 +42,14 @@
 .search-box input {
   outline: none;
   flex: 1;
-  padiing: 5px;
+  padiing: 8px;
   background: transparent;
-  font-size: 18px;
+  font-size: 26px;
+}
+
+.result {
+  padding: 20px;
+  width: 100%;
+
+
 }
