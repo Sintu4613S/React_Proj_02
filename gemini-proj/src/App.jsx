@@ -9,8 +9,10 @@ function App() {
 
   return (
     <>
-      <Sidebar />
-      <div className='flex-1 min-h-100vh relative' style={{ paddingBottom: '15vh' }}>
+      <div className='hidden md:block'>
+        <Sidebar />
+      </div>
+      <div className='flex-1 min-h-100vh relative overflow-y-auto' style={{ paddingBottom: '15vh' }}>
         <Navbar />
         <Mainbox />
       </div>
