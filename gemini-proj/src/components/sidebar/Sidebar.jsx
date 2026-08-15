@@ -1,36 +1,44 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from '../../assests/assest'
 import './Sidebar.css'
+import { useMyContext } from '../../context/MyContext'
+
 
 
 const Sidebar = () => {
 
   const [sidebaropen, setSideBarOpen] = useState(false)
 
+  const { recentSearch } = useMyContext()
+  console.log(recentSearch)
+
   return (
     <div className='sidebar'>
       <div className="top">
         <img onClick={() => setSideBarOpen(!sidebaropen)} className='menu' src={assets.menu_icon} alt="" />
+
         <div className='new-chat'>
           <img src={assets.plus_icon} alt="" />
           {sidebaropen && <p style={{ animation: 'fadeIn 2s  forwards' }}>New Chat</p>}
         </div>
-        {
-          sidebaropen ? (
-            <div className="recent">
-              <p className='recent-title'>Recent</p>
-              <div className="recent-entry">
+
+        {sidebaropen && (
+          <div className="recent">
+            <p className='recent-title'>Recent</p>
+            {recentSearch && recentSearch.map((item, index) => (
+              <div key={index} className="recent-entry">
                 <img src={assets.message_icon} alt="" />
-                {sidebaropen && <p style={{ animation: 'fadeIn 2s  forwards' }}>What is react...</p>}
+                <p style={{ animation: 'fadeIn 2s  forwards' }}>{item}</p>
+                {/* <button className='close'>X</button> */}
               </div>
-            </div>
-
-          ) :
-            null
-        }
-
-
+            ))}
+          </div>
+        )}
       </div>
+
+
+      {/* Bottom div */}
+
       <div className="bottom">
         <div className="bottom-item recent-entry">
           <img src={assets.question_icon} alt='' />
@@ -49,7 +57,7 @@ const Sidebar = () => {
 
       </div>
 
-    </div>
+    </div >
   )
 }
 
