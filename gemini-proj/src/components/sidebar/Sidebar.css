@@ -55,14 +55,30 @@
 }
 
 .sidebar .recent-entry {
+  /* position: relative; */
   display: flex;
   /* cursor: pointer; */
   padding: 10px 40px 10px 10px;
   align-items: start;
+  /* align-items: center; */
   gap: 10px;
   border-radius: 50px;
   cursor: pointer;
+  font-size: 20px;
+  /* background: #ffffff;
+  margin-bottom: 10px; */
 }
+
+/* .recent .close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #ede6f1;
+} */
 
 .sidebar .bottom {
   display: flex;
