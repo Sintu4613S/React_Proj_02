@@ -1,22 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Mainbox.css'
 import Card from './cards/Card'
 import { assets } from '../../assests/assest'
 import { runChat } from '../../config/gemini'
 import ResponseDisplay from './ResponseDisplay'
+import { useMyContext } from '../../context/MyContext'
+
 
 
 const Mainbox = () => {
   const [prompt, setPrompt] = useState('');
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false)
+  const { recentSearch, setRecentSearch } = useMyContext()
+  //console.log('object', setRecentSearch)
+
 
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!prompt.trim()) return;
 
+    setRecentSearch(prev => [...prev, prompt])
     setLoading(true);
     setResult('');
+
 
     try {
       // Call the helper function from your config file
@@ -89,7 +96,7 @@ const Mainbox = () => {
             </button>
           </div>
         </div>
-        <p className='text-center text-sm' style={{ marginBottom: '10px' }}>Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps</p>
+        <p className='text-center text-xl' style={{ marginBottom: '10px' }}>Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps</p>
 
 
       </div>
