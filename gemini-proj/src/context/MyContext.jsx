@@ -6,22 +6,40 @@ const MyContext = createContext();
 // Provide the Context
 const MyContextProvider = ({ children }) => {
   const [recentSearch, setRecentSearch] = useState([])
+  const [activeIndex, setActiveIndex] = useState(null)
   // const [recentSearch, setRecentSearch] = useState(() => {
   //   const saveData = localStorage.getItem('localSearches')
   //   return saveData ? JSON.parse(saveData) : [];
   // })
-  const [tab, setTab] = useState(null)
 
   // 2.1. Automatically save to localStorage every time a new item is added
   // useEffect(() => {
   //   localStorage.setItem('localSearches', JSON.stringify(recentSearch));
   // }, [recentSearch]);
 
+  const newChat = () => {
+    setRecentSearch([])
+    setActiveIndex(null)
+  }
+  const handleSearchSubmit = (newSearchData) => {
+    // 1. Update the search array
+    setRecentSearch((prev) => {
+      const updatedArray = [...prev, newSearchData];
+
+      // 2. Immediately switch to the last index of the new array
+      setActiveIndex(updatedArray.length - 1);
+
+      return updatedArray;
+    });
+  };
+
   const value = {
     recentSearch,
     setRecentSearch,
-    tab,
-    setTab
+    newChat,
+    activeIndex,
+    setActiveIndex,
+    handleSearchSubmit
   }
   return (
     <MyContext value={value}>
