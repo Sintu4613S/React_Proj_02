@@ -1,21 +1,42 @@
 .response-loading {
-  width: 100%;
   padding: 10px 15px;
   animaition: fadeIn 5s forwards;
   font-size: 30px;
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 .output-box {
+  max-height: 70vh;
   font-size: 40px;
+  overflow-y: auto;
 
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.loader hr {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px silid gray;
+  background: linear-gradient(to right, #d6d4d4, rgb(79, 79, 234), rgb(233, 106, 106));
+  animation: fadeIn 4s ease-in-out infinite;
 }
