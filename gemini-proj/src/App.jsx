@@ -1,8 +1,12 @@
 
+import { lazy, Suspense } from 'react'
 import './App.css'
-import Mainbox from './components/main/Mainbox'
+//import Mainbox from './components/main/Mainbox'
 import Navbar from './components/main/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
+
+const Mainbox = lazy(() => import('./components/main/Mainbox'))
+const Sidebar = lazy(() => import('./components/sidebar/Sidebar'))
 
 function App() {
 
@@ -10,11 +14,17 @@ function App() {
   return (
     <>
       <div className='hidden md:block'>
-        <Sidebar />
+        <Suspense fallback={<div>Loading....</div>}>
+          <Sidebar />
+        </Suspense>
       </div>
       <div className='flex-1 min-h-100vh relative overflow-y-auto' style={{ paddingBottom: '15vh' }}>
+
         <Navbar />
-        <Mainbox />
+
+        <Suspense fallback={<div>Loading....</div>}>
+          <Mainbox />
+        </Suspense>
       </div>
     </>
   )
