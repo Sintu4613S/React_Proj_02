@@ -21,25 +21,12 @@ const MyContextProvider = ({ children }) => {
     setRecentSearch([])
     setActiveIndex(null)
   }
-  const handleSearchSubmit = (newSearchData) => {
-    // 1. Update the search array
-    setRecentSearch((prev) => {
-      const updatedArray = [...prev, newSearchData];
-
-      // 2. Immediately switch to the last index of the new array
-      setActiveIndex(updatedArray.length - 1);
-
-      return updatedArray;
-    });
-  };
-
   const value = {
     recentSearch,
     setRecentSearch,
     newChat,
     activeIndex,
     setActiveIndex,
-    handleSearchSubmit
   }
   return (
     <MyContext value={value}>
