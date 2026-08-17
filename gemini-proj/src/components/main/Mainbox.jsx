@@ -1,19 +1,21 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { lazy, Suspense, useContext, useEffect, useState } from 'react'
 import './Mainbox.css'
-import Card from './cards/Card'
+//import Card from './cards/Card'
 import { assets } from '../../assests/assest'
 import { runChat } from '../../config/gemini'
-import ResponseDisplay from './ResponseDisplay'
+//import ResponseDisplay from './ResponseDisplay'
 import { useMyContext } from '../../context/MyContext'
 
-
+const ResponseDisplay = lazy(() => import('./ResponseDisplay'))
+const Card = lazy(() => import('./cards/Card'))
 
 const Mainbox = () => {
   const [prompt, setPrompt] = useState('');
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false)
-  const { recentSearch, setRecentSearch } = useMyContext()
+  const { recentSearch, setRecentSearch, activeIndex, setActiveIndex } = useMyContext()
   //console.log('object', setRecentSearch)
+  const displayResults = recentSearch.length === 0
 
 
   const handleSearch = async (e) => {
@@ -37,20 +39,23 @@ const Mainbox = () => {
   }
   return (
     <>
-      {!loading && !result ? (
+      {displayResults ? (
+
         <div className='main-container'>
           <div className='greet'>
             <p><span>Hello, Dev.</span></p>
             <p>How can I help you today ?</p>
           </div>
-          <Card />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Card />
+          </Suspense>
         </div>
-
       ) : (
         <div className='result'>
-          <ResponseDisplay loading={loading} result={result} />
+          <Suspense fallback={<div className='flex text-2xl justify-center items-center'>ResponseDisplay Loading...</div>}>
+            <ResponseDisplay loading={loading} result={result} />
+          </Suspense>
         </div>
-
       )
       }
 
