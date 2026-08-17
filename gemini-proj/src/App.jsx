@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react'
 import './App.css'
 //import Mainbox from './components/main/Mainbox'
 import Navbar from './components/main/Navbar'
-import Sidebar from './components/sidebar/Sidebar'
+//import Sidebar from './components/sidebar/Sidebar'
 
 const Mainbox = lazy(() => import('./components/main/Mainbox'))
 const Sidebar = lazy(() => import('./components/sidebar/Sidebar'))
