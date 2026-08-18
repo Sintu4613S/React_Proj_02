@@ -1,0 +1,44 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  margin: 60px 0 20px;
+}
+
+.title p {
+  font-weight: 600;
+  color: #212ea0;
+}
+
+.title h1 {
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: none;
+}
+
+.campus {
+  width: 90%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.gallery img {
+  width: 23%;
+  display: block;
+  border-radius: 10px;
+}
+
+.dark-btn {
+  color: white;
+  background-color: #212ea0;
+  cursor: pointer;
+}
