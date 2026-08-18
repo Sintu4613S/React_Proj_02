@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 
 const Hero = () => {
   return (
-    <div className='hero container-fluid'>
+    <div className='hero containers-fluid'>
       <div className='hero-text'>
         <h1 className='max-[650px]:max-w-100 text-3xl md:text-5xl lg:text-[60px] font-bold mx-auto'>We Ensure better education for a better world</h1>
 
