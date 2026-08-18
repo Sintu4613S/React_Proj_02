@@ -2,6 +2,7 @@ import React from 'react'
 import './Program.css'
 import { assets } from '../../../assets/assets'
 import About from '../about/About'
+import Campus from '../campus/Campus'
 
 const Program = () => {
   return (
@@ -35,6 +36,7 @@ const Program = () => {
 
       </div>
       <About />
+      <Campus />
     </div>
   )
 }
