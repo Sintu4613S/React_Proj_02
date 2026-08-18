@@ -1,6 +1,7 @@
 import React from 'react'
 import './Program.css'
 import { assets } from '../../../assets/assets'
+import About from '../about/About'
 
 const Program = () => {
   return (
@@ -33,7 +34,7 @@ const Program = () => {
         </div>
 
       </div>
-
+      <About />
     </div>
   )
 }
