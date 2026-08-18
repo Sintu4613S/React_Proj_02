@@ -3,6 +3,7 @@ import './Program.css'
 import { assets } from '../../../assets/assets'
 import About from '../about/About'
 import Campus from '../campus/Campus'
+import Testimonial from '../testimonials/Testimonial'
 
 const Program = () => {
   return (
@@ -33,10 +34,11 @@ const Program = () => {
             <p>Post Graduation</p>
           </div>
         </div>
-
       </div>
+
       <About />
       <Campus />
+      <Testimonial />
     </div>
   )
 }
