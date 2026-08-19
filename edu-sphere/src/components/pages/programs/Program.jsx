@@ -5,6 +5,7 @@ import About from '../about/About'
 import Campus from '../campus/Campus'
 import Testimonial from '../testimonials/Testimonial'
 import ContactUs from '../contactUs/ContactUs'
+// import { Outlet } from 'react-router-dom'
 
 const Program = () => {
   return (
@@ -36,11 +37,11 @@ const Program = () => {
           </div>
         </div>
       </div>
-
-      <About />
+      {/* <Outlet /> */}
+      {/* <About />
       <Campus />
       <Testimonial />
-      <ContactUs />
+      <ContactUs /> */}
     </div>
   )
 }
