@@ -42,3 +42,14 @@
   background-color: #212ea0;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .gallery {
+    flex-wrap: wrap
+  }
+
+  .gallery img {
+    width: 48%;
+    margin-bottom: 25px
+  }
+}
