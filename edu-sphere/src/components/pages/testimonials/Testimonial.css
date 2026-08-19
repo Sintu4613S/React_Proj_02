@@ -84,3 +84,41 @@
   color: #676767;
   line-height: 1.4;
 }
+
+@media (max-width: 800px) {
+  .testi {
+    padding: 0 40px
+  }
+
+  .next-btn,
+  .back-btn {
+    padding: 10px;
+    width: 35px
+  }
+
+  .testi ul li,
+  .slide {
+    padding: 10px
+  }
+
+  .user-info img {
+    width: 50px;
+    border: 3px solid #212EA0
+  }
+}
+
+@media (max-width: 600px) {
+  .user-info {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px
+  }
+
+  .user-info h3 {
+    font-size: 16px
+  }
+
+  .slider p {
+    font-size: 12px
+  }
+}
