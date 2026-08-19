@@ -1,4 +1,6 @@
 
+// import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import Hero from './components/hero/Hero'
 import Navbar from './components/navbar/Navbar'
@@ -10,8 +12,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Program />
+      <Outlet />
+      {/* <Hero />
+      <Program /> */}
 
     </>
   )
