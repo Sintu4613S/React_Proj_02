@@ -4,6 +4,7 @@ import { assets } from '../../../assets/assets'
 import About from '../about/About'
 import Campus from '../campus/Campus'
 import Testimonial from '../testimonials/Testimonial'
+import ContactUs from '../contactUs/ContactUs'
 
 const Program = () => {
   return (
@@ -39,6 +40,7 @@ const Program = () => {
       <About />
       <Campus />
       <Testimonial />
+      <ContactUs />
     </div>
   )
 }
