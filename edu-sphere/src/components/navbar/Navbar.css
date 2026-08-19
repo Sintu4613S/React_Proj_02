@@ -4,17 +4,46 @@ nav {
   left: 0;
   width: 100%;
   color: white;
-  /* background-color: rgb(27, 21, 195); */
-  display: flex;
   padding: 4px 0;
-  align-items: center;
-  justify-content: space-between;
   z-index: 10;
 }
 
+@media (max-width: 1000px) {
+  .logo {
+    width: 140px;
+  }
+}
+
+.dark-nav {
+  background: #212ea0;
+  transition: .5s;
+}
+
+@media (max-width: 840px) {
+  nav {
+    padding: 15px 0;
+  }
+
+  nav .mobile-sidebar {
+    position: absolute;
+    top: 65px;
+    width: 50%;
+    right: 0;
+    padding: 40px 5px;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.796);
+  }
+
+  nav .items-list a:hover {
+    transform: scale(1.5);
+    /* Fixed 'scale' to valid CSS 'transform: scale' */
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
+
+/* Kept only the spacing properties, removed display: flex */
 nav .items-list {
-  display: flex;
   gap: 20px;
-  align-items: center;
   margin-left: 20px;
 }
