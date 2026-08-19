@@ -34,7 +34,7 @@ nav {
     background: rgba(15, 15, 15, 0.796);
   }
 
-  nav .items-list a:hover {
+  nav .mobile-sidebar a:hover {
     transform: scale(1.5);
     /* Fixed 'scale' to valid CSS 'transform: scale' */
     padding: 5px 10px;
