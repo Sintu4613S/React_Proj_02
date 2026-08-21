@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const Context = createContext();
 
 const MyContextProvider = ({ children }) => {
-  const [issidebaropen, setSidebarOpen] = useState(false)
+  const [issidebaropen, setSidebarOpen] = useState(true)
   const value = {
     issidebaropen,
     setSidebarOpen
