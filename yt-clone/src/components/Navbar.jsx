@@ -1,11 +1,13 @@
 import React from 'react'
 import { assets } from '../assets/assest'
+import { useMyContext } from './context/Context'
 
 const Navbar = () => {
+  const { issidebaropen, setSidebarOpen } = useMyContext()
   return (
     <nav className='p-2! shadow-lg  flex items-center justify-between  md:px-6! z-10 bg-red-300 ' >
       <div className="flex gap-4 items-center">
-        <img src={assets.menu} className=' w-8 h-8 cursor-pointer bg-transparent hidden md:block' alt="" />
+        <img onClick={() => setSidebarOpen(!issidebaropen)} src={assets.menu} className=' w-8 h-8 cursor-pointer bg-transparent hidden md:block' alt="" />
         <img src={assets.logo} className='w-25 py-1! sm:w-40!' alt="" />
       </div>
       <div className="w-35 sm:w-80 mx-5! bg-gray-100  flex flex-1 border rounded-4xl items-center justify-between px-2!  ">
